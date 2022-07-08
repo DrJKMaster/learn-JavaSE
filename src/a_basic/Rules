@@ -1,0 +1,28 @@
+包的规则
+引入整个util包：import java.util.*;
+包的命名规则：xx_xx_xx
+软件包一般命名方法：com.公司名.项目名.业务模块名
+
+访问修饰符
+修饰符	    当前类	同一包内	    子孙类(同一包)	子孙类(不同包)	其他包
+public	    Y	    Y	        Y	            Y	            Y
+protected	Y	    Y	        Y	            Y/N（说明）	    N
+default	    Y	    Y	        Y	            N	            N
+private	    Y	    N	        N	            N	            N
+protected 说明：当子类与基类不在同一包中时，
+子类实例可以访问其从基类继承而来的 protected 方法，而不能访问基类实例的 protected 方法。
+
+final
+加在类前：不允许继承
+加在方法前：不允许重写
+加在变量前：不允许修改
+static final 可搭配使用，底层有优化
+
+常量命名规则：XX_XX_XX
+常量初始化：定义时，代码块，构造器
+静态常量初始化：定义时，代码块
+
+不常用的修饰符
+1.strictfp：精确浮点，进行浮点运算时完全依照浮点规范 IEEE-754 来执行
+    你可以将一个类、接口以及方法声明为 strictfp，但是不允许对接口中的方法以及构造函数声明 strictfp 关键字
+2.volatile：确保本条指令不会因编译器的优化而省略，且要求每次直接读值
