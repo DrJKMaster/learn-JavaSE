@@ -1,0 +1,17 @@
+集合框架图
+|---Collection（单列集合，存放 value）
+|   |---List（存储顺序与读取顺序一致，元素可重复，支持索引）
+|   |   |---ArrayList（本质为数组，线程不安全，效率高）      应用场景：经常改查，单线程
+|   |   |---LinkedList（本质为双向链表，线程不安全）        应用场景：经常增删，单线程
+|   |   |---Vector（本质为数组，线程安全，效率不高）         应用场景：经常改查，多线程
+|   |   ...（包括 Stack）
+|   |---Set（存储顺序与读取顺序可能不同，元素不可重复，不支持索引）
+|       |---HashSet（本质为 HashMap）
+|       |   |---LinkedHashSet（本质为 LinkedHashMap）
+|       |---TreeSet（不可存放 null，插入时进行排序，红黑树）
+|---Map（双列集合，存放键值对，key 不可重复，value 可重复，不支持索引）
+    |---HashMap（线程不安全，可存放 null，数组 + 链表 + 红黑树）
+    |   |---LinkedHashMap（在 HashMap 的基础上实现取出顺序与存储顺序一致的效果）
+    |---HashTable（线程安全，不可存放 null，数组 + 链表）
+    |   |---Properties（可读取 .properties 文件）
+    |---TreeMap（不可存放 null，插入时对 key 进行排序，红黑树）
