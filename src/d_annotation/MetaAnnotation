@@ -1,0 +1,16 @@
+元注解
+
+@Retention(RetentionPolicy value())：指定注解的作用范围
+value()：将注解保留到什么阶段
+    1.RetentionPolicy.SOURCE
+        将注解保留到源文件阶段
+    2.RetentionPolicy.CLASS
+        将注解保留到字节码阶段（默认）
+    3.RetentionPolicy.RUNTIME
+        将注解保留到 JVM 运行阶段，程序可以通过反射获取该注解
+
+@Target(ElementType[] value())：指定注解可以在哪些地方使用
+
+@Documented：注解会在 javadoc 中显示
+
+@Inherited：如果某个类使用了被 @Inherited 注解的注解，则其子类自动拥有该注解
