@@ -1,0 +1,10 @@
+类加载阶段
+    创建一个 Class 对象
+    在该对象中
+        成员变量被加载为 Field[]
+        构造器被加载为 Constructor[]
+        方法被加载为 Method[]
+运行阶段
+    根据 Class 对象创建真正的对象
+
+使用类时，自动调用 ClassLoader 的 loadClass 方法进行类加载
