@@ -9,8 +9,8 @@ class Compare {
         System.out.println(SeasonClass.AUTUMN);
         System.out.println(SeasonClass.WINTER);
 
-        //enum实现枚举
-        System.out.println("enum实现枚举");
+        //enum 实现枚举
+        System.out.println("enum 实现枚举");
         System.out.println(SeasonEnum.SPRING);
         System.out.println(SeasonEnum.SUMMER);
         System.out.println(SeasonEnum.AUTUMN);
