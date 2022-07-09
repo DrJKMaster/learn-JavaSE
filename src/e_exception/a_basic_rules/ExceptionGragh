@@ -1,0 +1,26 @@
+1.编译时异常需要显式地使用 try-catch-finally 或 throws 处理
+2.运行时异常默认使用 throws 处理
+3.子类重写父类的方法时所抛出的异常，可以与父类抛出的异常一致，或是父类抛出的异常的子类
+
+Throwable
+|---Error（错误，遇到就会直接报错退出）
+|   |---StackOverflowError（栈溢出错误）
+|   |---OutOfMemoryError（内存溢出错误）
+|   ...
+|---Exception（异常，可通过 try/catch 捕获）
+    |---RuntimeException（运行时异常）
+    |   |---NullPointerException（空指针异常）
+    |   |---ArithmeticException（算术异常）
+    |   |---ArrayIndexOutOfBoundsException（数组索引越界异常）
+    |   |---ClassCastException（类转换异常）
+    |   |---NumberFormatException（数字格式异常：
+    |   |   当程序试图将字符串转换为数字但失败时，会抛出该异常）
+    |   ...
+    |以下是编译时异常，编译时必须处理，否则不能通过
+    |---FileNotFoundException（找不到文件异常）
+    |---ClassNotFoundException（找不到类异常）
+    |---SQLException（操作数据库时，查询表异常）
+    |---IOException（操作文件时异常）
+    |---EOFException（到达文件末异常）
+    |---IllegalArgumentException（非法参数异常）
+    ...

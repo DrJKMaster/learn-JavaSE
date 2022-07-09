@@ -1,0 +1,24 @@
+try {
+    可能发生异常的代码块
+    某语句发生异常后，之后的语句不再执行，直接跳转到 catch 块
+} catch (Exception e //发生的异常被 Exception e 捕获) {
+    发生异常则执行此代码块
+    可以在此处写出现异常后的应对方法
+} catch (Exception e //发生的异常被 Exception e 捕获) {
+    可以写多个 catch 语句，当抛出的异常与前面的类型不匹配
+        如：
+        第一个 catch 接收 NullPointerException 类型的异常
+        而程序实际抛出了 ArithmeticException 类型的异常
+        则会自动跳转到下一个 catch，直到匹配到对应的 catch
+} finally {
+    可以不写 finally，也可以不写 catch，但至少要写一项
+    如果只写 finally，则不处理异常，程序将在执行 finally 代码块后退出
+    不论是否发生异常，都执行此代码块
+    通常在此处写一些资源的释放
+    ↓↓↓ 注意 ↓↓↓
+    finally 的优先级比 return/throw 更高（以下以 return 为例）
+    1.当既有 catch 也有 finally，且 catch 中有 return 语句时
+      该 return 语句内容会被执行，但返回被延迟到 finally 结束后
+    2.当 finally 中有 return 语句时
+      直接退出
+}
