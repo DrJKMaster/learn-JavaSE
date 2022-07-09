@@ -2,7 +2,7 @@ package b_class.e_enum;
 
 import java.util.Arrays;
 
-class CustomMethod {
+class CommonMethod {
     public static void main(String[] args) {
         //1.name()：返回对象的名字
         System.out.println("1.name()：返回对象的名字");
