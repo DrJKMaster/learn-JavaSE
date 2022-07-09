@@ -1,0 +1,21 @@
+IO流
+|---输入流
+|   |---InputStream（字节流，以 8 bit 为单位，顶级抽象父类）
+|   |   |---FileInputStream
+|   |---Reader（字符流，以字符为单位，顶级抽象父类）
+|       |---InputStreamReader
+|           |---FileReader
+|---输出流
+    |---OutputStream（字节流，以 8 bit 为单位，顶级抽象父类）
+    |   |---FileInputStream
+    |---Writer（字符流，以字符为单位，顶级抽象父类）
+        |---OutputStreamWriter
+            |---FileWriter
+
+字节流与处理流
+1.字节流：对一个特定的数据源操作
+2.处理流/包装流：内部维护了一个字节流（或处理流），以实现更多的功能（装饰器模式）
+
+转换流
+Reader 读取文本时默认按照 utf-8 进行读取，如果编码方式不匹配则会出现乱码
+此时需要通过转换流指定编码方式进行读取
